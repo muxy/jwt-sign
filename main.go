@@ -55,6 +55,8 @@ func validateJWTAndShowClaims(jwtString string, secret string, b64 bool) {
 					println("Provided secret was not encoded, but the JWT was signed with the base64 decoded bytes instead.")
 				}
 			}
+
+			os.Exit(-1)
 		}
 	} else {
 		b, _ := json.MarshalIndent(claims.Claims, "", "  ")
