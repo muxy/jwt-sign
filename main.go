@@ -12,7 +12,7 @@ import (
 	"os"
 	"time"
 
-	jwt "bitbucket.org/muxy/lambda-extension-state/v2/github.com/dgrijalva/jwt-go"
+	jwt "github.com/dgrijalva/jwt-go"
 )
 
 func keyFunc(secret string, isBase64 bool) func(*jwt.Token) (interface{}, error) {
